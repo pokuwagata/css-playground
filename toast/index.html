@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>toast</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <style>
+      .toast {
+        background-color: rgb(56, 161, 105);
+        color: #fff;
+        border-radius: 15px;
+        padding: 1rem;
+        width: 300px;
+        position: relative;
+      }
+      .toast-wrapper {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .toast__close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        color: #fff;
+        background: transparent;
+        border: 0;
+      }
+      .toast__inner::before {
+        content: "✔";
+        position: absolute;
+      }
+      .toast__heading {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 1rem;
+      }
+      .toast__msg {
+        margin-left: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toast-wrapper">
+      <div class="toast">
+        <button class="toast__close">☓</button>
+        <div class="toast__inner">
+          <div class="toast__msg">
+            <strong class="toast__heading">Account created.</strong>
+            <p>We've created your account for you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
